@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from pointblank.id/event by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Jan 2019 03:54:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+	<meta name="author" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Point Blank beyond Limits Launching Event" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:description" content="Medan peperangan baru telah dimulai! Ajak teman sperjuanganmu untuk registrasi melalui link kamu, dan dapatkan hadiah sepeda motor NMAX!! Ajak teman seperjuanganmu! Dapatkan PB Voucher, Limited Edition Jaket & Helm, Asus Headset dan Sepeda motor NMAX!!" />
+    <meta property="og:image" content="../www.pointblank.id/images/event/2018/launching/og_image.jpg" />
+    <meta name="keywords" content="PB, point blank, fps, shooting game, online" />
+    <meta name="description" content="Medan peperangan baru telah dimulai! Ajak teman sperjuanganmu untuk registrasi melalui link kamu, dan dapatkan hadiah sepeda motor NMAX!! Ajak teman seperjuanganmu! Dapatkan PB Voucher, Limited Edition Jaket & Helm, Asus Headset dan Sepeda motor NMAX!!" />
+	<title>PB Indonesia</title>
+	<link rel="stylesheet" type="text/css" href="css/event/2018/launching.css">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129579613-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'UA-129579613-1');
+</script>
+	<script type="text/javascript" src="js/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	   var zptRcvMessage = {
+	    receiveMessage : function (event) {
+	        var regPBID = /.pbid/g;
+	
+	        var data = $.parseJSON(event.data);
+	
+	        if (regPBID.test(event.data)) {
+	            switch (data.type) {
+	                case "pbid_iframe_resize":
+	                    var frame = $("#layer_popup").find("iframe");
+	                    if (frame.length > 0) {
+	                        if (data.width) {
+	                            frame.attr("width", data.width);
+	                        }
+	                        if (data.height) {
+	                            frame.attr("height", data.height);
+	                        }
+	                    }
+	                    break;
+	                case "pbid_location_change":
+	                    if (data.location) {
+	                        document.location.href = data.location;
+	                    }
+	                    break;
+	                case "pbid_layer_popup_close":
+	                    $("#layer_popup").html("").fadeOut("fast");
+	                    break;
+	                case "pbid_page_reload":
+	                    window.location.href = window.location;
+	                    break;
+	                case "pbid_set_value":
+	                    $("#"+data.id).val(data.value);
+	                    break;
+	                case "pbid_pop_layer":
+	                	openLayerPopup(data.url);
+	                    break;
+	            }
+	        }
+	        else {
+	            return false;
+	        }
+	    }
+	};
+	
+	if(window.addEventListener) {
+		window.addEventListener ("message", zptRcvMessage.receiveMessage, false);
+	} else {
+		if(window.attachEvent) {  
+			window.attachEvent("onmessage", zptRcvMessage.receiveMessage);
+		}
+	}
+    function openLayerPopup(param) {
+        var url = "";
+        if ($.trim(param) == "login") {
+            url = "<p class=\"dimmed\"></p><iframe src=\"/login/form\" height=\"576\" style=\"border:none;\" frameborder=\"0\" scrolling=\"no\"></iframe>";
+        }
+        else {
+        	url = "<p class=\"dimmed\"></p><iframe src=\""+param+"\" height=\"576\" style=\"border:none;\" frameborder=\"0\" scrolling=\"no\"></iframe>";
+        }
+        $("#layer_popup").html(url).fadeIn("fast");
+        //return false;
+    }
+	//]]>
+	</script>
+</head>
+
+<body>
+	<div id="layer_popup" style="display:none;">
+		<p class="dimmed"></p>
+		<iframe src="#" height="456" frameborder="0" scrolling="no"></iframe>
+	</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+	$("#index").attr("href", "javascript:void('0');");
+	$("#index").parent().addClass("current");
+});
+//]]>
+</script>
+	<header>
+		<ul>
+			<li><a href="event.html" class="gnb_bi" id="index"><p>Point Blank Beyond Limits</p></a></li>
+			<li><img src="images/event/2018/launching/gnb_new.png" alt="New Event"><a href="event/openbox.html" class="gnb_pk" id="openbox"><p>BONGKAR HADIAH !!!</p></a></li>
+			<li><img src="images/event/2018/launching/gnb_new.png" alt="New Event"><a href="event/allinone.html" class="gnb_gy" id="allinone"><p>Banjir Event</p></a></li>
+			<li><a href="event/share.html" class="gnb_gn" id="share"><p>Sebarkan Sinyal Perang!</p></a></li>
+			<li><a href="event/invite.html" class="gnb_bl" id="invite"><p>Kumpulkan Pasukan Ke Medan Baru!</p></a></li>
+			<li><a href="event/discord.html" class="gnb_vt" id="discord"><p>Point Blank Yang Kumau,<br>Klik Discord!</p></a></li>
+		</ul>
+		
+	</header>
+	<section class="main">
+		<div class="container">
+			<h1><img src="images/event/2018/launching/bi_pbbl.png" alt="Point Blank Beyond Limits"></h1>
+			<p class="tit">Ayo selamatkan karaktermu untuk medan perang baru dan dapatkan hadiah menariknya!!</p>
+			<div class="txt">
+				<p>Transfer akun kamu sebelum tanggal 31 Desember 2018 !!</p>
+				<p>Karena medan perang akan dimulai tanggal 1 Januari 2019 !!</p>
+			</div>
+			<div class="youtube">
+				<iframe src="https://www.youtube.com/embed/mibvhvy-tAY?autoplay=1&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<img src="images/footer_zii.png" alt="PT. Zepetto Interactive Indonesia">
+		<p class="cs">Jika ada pertanyaan hubungi <a href="mailto:cs@zepetto.id">cs@zepetto.id</a></p>
+		<p>COPYRIGHT PT. ZEPETTO INTERACTIVE INDONESIA ALL RIGHTS RESERVED.</p>
+	</footer>
+</body>
+
+<!-- Mirrored from pointblank.id/event by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Jan 2019 03:54:09 GMT -->
+</html>
